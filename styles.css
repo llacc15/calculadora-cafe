@@ -69,4 +69,20 @@ body {
     text-align: center;
     background-color: green;
   }
-  
+   .progressBarContainer{
+    background-color: rgb(229, 233, 236);
+    height: 50%;
+    border-radius: 12px;
+    width: 5%;
+  }
+  .progresBar{
+    background-color: rgba(0, 100, 247);
+    height: 50%;
+    border-radius: 10px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+
+  }
