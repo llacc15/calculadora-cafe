@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  header {
+    background-color: green;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header .configuracion {
+    margin-top: 1rem;
+  }
+  
+  header .configuracion input {
+    padding: 0.5rem;
+    margin-right: 1rem;
+  }
+  
+  h1, h2 {
+    margin: 1rem 0;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  th, td {
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: black;
+  }
+  
+  #tabla-resultados {
+    margin-top: 2rem;
+  }
+  #tabla-resumen tr:last-child {
+    font-weight: bold;
+    background-color: #f0f0f0;
+  }
+  .titulo{
+    text-align: center;
+    background-color: green;
+  }
+  

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Cogedores de Café</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Registro de Cogedores de Café</h1>
+    <div class="configuracion">
+      <label for="valor-kilo">Valor por kilo de café (COP):</label>
+      <input type="number" id="valor-kilo" placeholder="Ej: 1500" required>
+      <button id="actualizar-valor">Actualizar</button>
+    </div>
+  </header>
+  <main>
+    <section id="registro">
+      <h2>Registro Semanal</h2>
+      <table id="tabla-registro">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+            <th>Sábado</th>
+            <th>Domingo</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla">
+          <!-- Filas dinámicas -->
+        </tbody>
+      </table>
+      <button id="agregar-fila">Agregar Recolector</button>
+      <button id="calcular-totales">Calcular Totales</button>
+    </section>
+    <section id="tabla-resultados">
+      <h2>Resumen Semanal</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Total (kg)</th>
+            <th>Total a Pagar (COP)</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-resumen"></tbody>
+      </table>
+    </section>
+     <!-- Barra de progreso -->
+     <section id="progreso">
+      <div class="titulo"><h2>Progreso de la Recolección</h2></div>
+      <h2>esta es una pequeña parte del proyecto que se espera qur con el paso del tiempo secnvierta en un gran poryecto se espera que con este proyecto ayude a los finqueros a ser mas organizados y esperamos contar con tua apoyo para poder hacter este proyecto una realidad</h2>
+      <progress id="barra-progreso" value="0" max="100"></progress>
+      <p id="porcentaje-progreso">0%</p>
+    </section>
+  </main>  <a href="https://wa.me/573216370717?text=Quiero%20apoyar%20el%20proyecto%20de%20cogedores%20de%20café" 
+  class="whatsapp" target="_blank">aqui te podras comunicar con el encargado si quieres hacer parte de este proyecto o saber mas informacion de dicho proyecto</a>
+</main>
+  <script src="p.js"></script>
+</body>
+</html>
