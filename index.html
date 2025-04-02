@@ -1,2 +1,75 @@
-
+<!DOCTYPE html>
+ <html lang="es">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Registro de Cogedores de Café</title>
+   <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+   <header>
+     <h1>Registro de Cogedores de Café</h1>
+     <div class="configuracion">
+       <label for="valor-kilo">Valor por kilo de café (COP):</label>
+       <input type="number" id="valor-kilo" placeholder="Ej: 1500" required>
+       <button id="actualizar-valor">Actualizar</button>
+     </div>
+   </header>
+   <main>
+     <section id="registro">
+       <h2>Registro Semanal</h2>
+       <table id="tabla-registro">
+         <thead>
+           <tr>
+             <th>Nombre</th>
+             <th>Lunes</th>
+             <th>Martes</th>
+             <th>Miércoles</th>
+             <th>Jueves</th>
+             <th>Viernes</th>
+             <th>Sábado</th>
+             <th>Domingo</th>
+           </tr>
+         </thead>
+         <tbody id="cuerpo-tabla">
+           <!-- Filas dinámicas -->
+         </tbody>
+       </table>
+       <button id="agregar-fila">Agregar Recolector</button>
+       <button id="calcular-totales">Calcular Totales</button>
+     </section>
+     <section id="tabla-resultados">
+       <h2>Resumen Semanal</h2>
+       <table>
+         <thead>
+           <tr>
+             <th>Nombre</th>
+             <th>Total (kg)</th>
+             <th id="totalGeneralCargas">0.00 cargas</th>
+             <th>Total a Pagar (COP)</th>
+           </tr>
+         </thead>
+         <tbody id="tabla-resumen"></tbody>
+       </table>
+     </section>
+      <button id="descargar-csv">Descargar CSV</button>
+     <button id="guardar-registros">Guardar Registros</button>
+      <!-- Barra de progreso -->
+      <section id="progreso">
+       <div class="titulo"><h2>Progreso de la Recolección</h2></div>
+       <h2>Estamos construyendo algo increíble, y esto es solo el comienzo. Esta es una muestra de lo que podemos lograr juntos con pasión y colaboración. ¡Tu apoyo es la clave para llevar este proyecto a nuevas alturas!</h2>
+       <section>
+         <p>barra de progreso</p>
+         <div class="progressBarContainer">
+         <div class="progresBar html">5%</div>
+       </div>
+       </section>
+        <a href="https://wa.me/+573216370717?text=Quiero%20apoyar%20el%20proyecto%20de%20cogedores%20de%20café" target="_blank" style="text-decoration: none;">
+         <button style="background-color: #25D366; color: white; padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;">
+           📞 para mas informacion contacta con el asesor</a>
+         </button>
+ 
+   <script src="p.js"></script>
+ </body>
+ </html>
 
