@@ -63,7 +63,8 @@ document.getElementById("calcular-totales").addEventListener("click", function (
         // Sumar al total global
         totalGlobalKilos += totalKilos;
         totalGlobalPagar += totalPagar;
-    }    // Agregar a la tabla resumen
+
+      // Agregar a la tabla resumen
 const filaResumen = document.createElement("tr");
 filaResumen.innerHTML = `
     <td>${nombre}</td>
@@ -169,7 +170,6 @@ function cargarRegistros() {
       });
   }
 }
-
 document.getElementById('clearDataBtn').addEventListener('click', function () {
     // Eliminar datos del localStorage
     localStorage.removeItem('registrosCafe');
@@ -182,5 +182,6 @@ document.getElementById('clearDataBtn').addEventListener('click', function () {
         location.reload();
     }, 500);
 });
-cargarRegistros();
+cargarRegistros(); 
+
 
