@@ -171,35 +171,16 @@ function cargarRegistros() {
   }
 }
 
-// Ejecutar al cargar la página
-window.onload = cargarRegistros;
-document.getElementById('borrarRegistros').addEventListener('click', function () {
-    if (confirm("¿Estás seguro de que deseas borrar los registros guardados?")) {
-        localStorage.removeItem('resumenSemanal');
-        alert("Registros borrados correctamente.");
-        // También puedes limpiar la tabla en pantalla si quieres
-        const resumenBody = document.getElementById('resumenBody');
-        if (resumenBody) {
-            resumenBody.innerHTML = '';
-        }
-    }
-});
-document.getElementById('borrarRegistros').addEventListener('click', function () {
-    if (confirm("¿Estás seguro de que deseas borrar los registros guardados?")) {
-        localStorage.removeItem('resumenSemanal');
-        alert("Registros borrados correctamente.");
+document.getElementById('clearDataBtn').addEventListener('click', function () {
+    // Eliminar datos del localStorage
+    localStorage.removeItem('registrosCafe');
 
-        // 🧹 Limpiar tabla de resumen
-        const resumenBody = document.getElementById('resumenBody');
-        if (resumenBody) {
-            resumenBody.innerHTML = '';
-        }
+    // Mostrar alerta
+    alert("✅ Los registros han sido eliminados correctamente. La página se recargará.");
 
-        // 🧹 También puedes limpiar el total final si existe
-        const totalRow = document.querySelector('tfoot');
-        if (totalRow) {
-            totalRow.innerHTML = '';
-        }
-    }
+    // Recargar página después de un pequeño delay
+    setTimeout(() => {
+        location.reload();
+    }, 500);
 });
 
