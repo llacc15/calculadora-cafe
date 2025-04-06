@@ -173,4 +173,14 @@ function cargarRegistros() {
 
 // Ejecutar al cargar la página
 window.onload = cargarRegistros;
-
+document.getElementById('borrarRegistros').addEventListener('click', function () {
+    if (confirm("¿Estás seguro de que deseas borrar los registros guardados?")) {
+        localStorage.removeItem('resumenSemanal');
+        alert("Registros borrados correctamente.");
+        // También puedes limpiar la tabla en pantalla si quieres
+        const resumenBody = document.getElementById('resumenBody');
+        if (resumenBody) {
+            resumenBody.innerHTML = '';
+        }
+    }
+});
