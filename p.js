@@ -63,27 +63,26 @@ document.getElementById("calcular-totales").addEventListener("click", function (
         // Sumar al total global
         totalGlobalKilos += totalKilos;
         totalGlobalPagar += totalPagar;
-
-        // Agregar a la tabla resumen
-        const filaResumen = document.createElement("tr");
-        filaResumen.innerHTML = `
-            <td>${nombre}</td>
-            <td>${totalKilos.toFixed(2)} kg</td>
-            <td>${(totalKilos / 125).toFixed(2)} cargas</td> <!-- NUEVA COLUMNA -->
-            <td>$${totalPagar.toFixed(2)} COP</td>
-        `;
-        resumen.appendChild(filaResumen);
+    }    // Agregar a la tabla resumen
+const filaResumen = document.createElement("tr");
+filaResumen.innerHTML = `
+    <td>${nombre}</td>
+    <td>${totalKilos.toFixed(2)} kg</td>
+    <td>${(totalKilos / 125).toFixed(2)} cargas</td>
+    <td>${totalPagar.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</td>
+`;
+resumen.appendChild(filaResumen);
     });
-
-    // Mostrar totales globales al final
-    const filaTotales = document.createElement("tr");
-    filaTotales.innerHTML = `
-        <td><strong>TOTAL</strong></td>
-        <td><strong>${totalGlobalKilos.toFixed(2)} kg</strong></td>
-        <td><strong>${(totalGlobalKilos / 125).toFixed(2)} cargas</strong></td>
-        <td><strong>$${totalGlobalPagar.toFixed(2)} COP</strong></td>
-    `;
-    resumen.appendChild(filaTotales);
+// Mostrar totales globales al final
+const filaTotales = document.createElement("tr");
+filaTotales.innerHTML = `
+    <td><strong>TOTAL</strong></td>
+    <td><strong>${totalGlobalKilos.toFixed(2)} kg</strong></td>
+    <td><strong>${(totalGlobalKilos / 125).toFixed(2)} cargas</strong></td>
+    <td><strong>${totalGlobalPagar.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</strong></td>
+`;
+resumen.appendChild(filaTotales);
+   
 });
 
 // Barra de progreso
@@ -183,4 +182,5 @@ document.getElementById('clearDataBtn').addEventListener('click', function () {
         location.reload();
     }, 500);
 });
+cargarRegistros();
 
