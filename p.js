@@ -184,3 +184,22 @@ document.getElementById('borrarRegistros').addEventListener('click', function ()
         }
     }
 });
+document.getElementById('borrarRegistros').addEventListener('click', function () {
+    if (confirm("¿Estás seguro de que deseas borrar los registros guardados?")) {
+        localStorage.removeItem('resumenSemanal');
+        alert("Registros borrados correctamente.");
+
+        // 🧹 Limpiar tabla de resumen
+        const resumenBody = document.getElementById('resumenBody');
+        if (resumenBody) {
+            resumenBody.innerHTML = '';
+        }
+
+        // 🧹 También puedes limpiar el total final si existe
+        const totalRow = document.querySelector('tfoot');
+        if (totalRow) {
+            totalRow.innerHTML = '';
+        }
+    }
+});
+
